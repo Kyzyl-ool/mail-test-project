@@ -29,6 +29,6 @@
     "noEmit": true,
     "jsx": "react"
   },
-  "include": ["lib", "public/service-worker.js"],
+  "include": ["lib", "public/service-worker.js", "stories"],
   "exclude": ["**/*.svg", "**/node_modules/**", "**/*.scss"]
 }
