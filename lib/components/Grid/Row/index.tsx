@@ -1,42 +1,49 @@
-import React from 'react';
-import { NumbersFrom0To24 } from 'components/Grid/types';
+import React, { HTMLAttributes } from 'react';
 import './index.scss';
+import { makeClassNames } from '../../../utils/makeObjectFromArray';
+import classNames from 'classnames';
 
 /**
  * Row – строка сетки.
  * По умолчанию занимает все доступное пространство.
  * В children должны быть только элементы Col.
  */
-interface IGridRow {
+interface IGridRow extends HTMLAttributes<HTMLDivElement> {
   /**
-   * Задает отступ вправо на заданное кол-во позиций offset.
+   * Задает отступ между столбцами Col в этой строке (в пикселях).
+   * Достигается это через inline-стиль margin-left
    */
-  offset?: NumbersFrom0To24;
+  gap?: number;
 }
 
-const makeComponent = (child: React.ReactElement, flexString: string): React.ReactNode => {
+const makeComponent = (child: React.ReactElement, flexString: string, gap: number): React.ReactNode => {
   return React.cloneElement(child, {
     ...child.props,
     style: {
-      flex: flexString
+      ...child.props.style,
+      flex: flexString,
+      marginLeft: `${gap}px`
     }
   });
 };
 
 const Row: React.FC<IGridRow> = props => {
-  const { children, offset = 0, ...rest } = props;
+  const { children, gap = 0, className, ...rest } = props;
 
   const spanSum = React.Children.map<number, React.ReactNode>(
     children,
     (child: React.ReactElement) => child.props.span
   ).reduce((previousValue, currentValue) => previousValue + currentValue, 0);
 
+  const classes = classNames(className, makeClassNames('ux-row', []));
+
   return (
-    <div className={'ux-row'}>
-      {React.Children.map<React.ReactNode, React.ReactNode>(children, (child: React.ReactElement) => {
+    <div {...rest} className={classes}>
+      {React.Children.map<React.ReactNode, React.ReactNode>(children, (child: React.ReactElement, index) => {
         return makeComponent(
           child,
-          spanSum < 24 ? `0 0 ${(child.props.span / 24) * 100}%` : `${child.props.span / spanSum} 0 auto`
+          spanSum < 24 ? `0 0 ${(child.props.span / 24) * 100}%` : `${child.props.span / spanSum} 0 auto`,
+          index > 0 ? gap : 0
         );
       })}
     </div>

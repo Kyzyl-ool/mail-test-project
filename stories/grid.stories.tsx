@@ -19,3 +19,38 @@ export const OneRow = () => (
     <Col span={11}>4</Col>
   </Row>
 );
+
+export const GapedRow = () => {
+  return (
+    <>
+      <Row gap={90}>
+        <Col span={6} style={{ backgroundColor: '#ddd' }}>
+          <Text>1</Text>
+        </Col>
+        <Col span={6} style={{ backgroundColor: '#ddd' }}>
+          <Text>2</Text>
+        </Col>
+        <Col span={6} style={{ backgroundColor: '#ddd' }}>
+          <Text>3</Text>
+        </Col>
+        <Col span={6} style={{ backgroundColor: '#ddd' }}>
+          <Text>4</Text>
+        </Col>
+      </Row>
+      <Row gap={8}>
+        <Col span={6} style={{ backgroundColor: '#ddd' }}>
+          <Text>1</Text>
+        </Col>
+        <Col span={6} style={{ backgroundColor: '#ddd' }}>
+          <Text>2</Text>
+        </Col>
+        <Col span={6} style={{ backgroundColor: '#ddd' }}>
+          <Text>3</Text>
+        </Col>
+        <Col span={6} style={{ backgroundColor: '#ddd' }}>
+          <Text>4</Text>
+        </Col>
+      </Row>
+    </>
+  );
+};

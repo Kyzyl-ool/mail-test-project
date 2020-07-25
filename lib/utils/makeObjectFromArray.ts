@@ -12,7 +12,7 @@ function makeModifierClassesFromModifiersName(modifiersName: string[], blockName
   return modifiersName.map(value => `${blockName}_${value}`);
 }
 
-export function makeClassNames(blockName, modifiers) {
+export function makeClassNames(blockName, modifiers = []) {
   return {
     [blockName]: true,
     ...makeObjectFromArray<true>(makeModifierClassesFromModifiersName(modifiers, blockName), value => true)
