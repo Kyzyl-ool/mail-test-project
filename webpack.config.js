@@ -13,7 +13,7 @@ module.exports = {
     main: './lib/index.tsx'
   },
   output: {
-    publicPath: process.env.NODE_ENV === 'production' ? '/mail-test-project' : '/',
+    publicPath: '/mail-test-project',
     path: __dirname + '/build',
     filename: '[name].[hash].js'
   },
