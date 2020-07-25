@@ -1,0 +1,17 @@
+@import "~styles/theme.scss";
+@import "~styles/typography.scss";
+
+.ux-button {
+  border: 1px solid black;
+  border-radius: 2px;
+
+
+  &_small {
+    padding: 4px 8px;
+  }
+
+  &_default {
+    background-color: $primary-color;
+    color: $typography-white-primary-color;
+  }
+}
