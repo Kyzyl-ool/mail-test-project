@@ -1,7 +1,7 @@
 @import "~styles/typography.scss";
 
 .ux-text {
-  font-family: $font;
+  font-family: $font-family;
 
   @include font-sizes();
   @include colors();

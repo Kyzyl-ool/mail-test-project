@@ -1,4 +1,5 @@
-export type NumbersFrom1To24 =
+export type NumbersFrom0To24 =
+  | 0
   | 1
   | 2
   | 3

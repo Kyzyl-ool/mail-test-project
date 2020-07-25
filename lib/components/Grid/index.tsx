@@ -8,10 +8,10 @@ import Row from './Row';
 
 type IGrid = HTMLAttributes<HTMLDivElement>;
 
-const List: React.FC<IGrid> = props => {
+const Grid: React.FC<IGrid> = props => {
   return <></>;
 };
 
-export default List;
+export default Grid;
 
 export { Row, Col };

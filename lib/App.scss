@@ -1,7 +1,5 @@
 @import "~styles/typography.scss";
 
-.ux-title {
+html * {
   font-family: $font-family;
-
-  @include colors();
 }
