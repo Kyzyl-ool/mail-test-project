@@ -20,7 +20,7 @@ export interface IIcon extends HTMLAttributes<HTMLSpanElement> {
   iconName: IconNames;
 
   /**
-   * Задает закругление
+   * Задаёт закругление
    */
   rounded?: boolean;
 }
