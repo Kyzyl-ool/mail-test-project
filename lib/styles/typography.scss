@@ -1,8 +1,30 @@
 @import "~styles/palettes/shades-of-gray.scss";
 
 $typography-black-color: $charleston-green;
-$typography-primary-color: $gunmetal;
-$typography-secondary-color: $slate-gray;
+$typography-primary-color: $davys-grey;
+$typography-secondary-color: $cadet-blue-crayola;
 
 $typography-white-primary-color: $cultured;
 $typography-white-secondary-color: $cultured-2;
+
+$font: 'Roboto', sans-serif;
+
+$text-small: 12px;
+$text-medium: 14px;
+$text-large: 18px;
+
+
+
+@mixin colors() {
+  &_primary {
+    color: $typography-primary-color;
+  }
+
+  &_light {
+    color: $typography-secondary-color;
+  }
+
+  &_black {
+    color: $typography-black-color
+  }
+}

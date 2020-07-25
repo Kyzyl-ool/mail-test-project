@@ -1,1 +1,1 @@
-export type CheckBoxStyleType = 'default';
+export type CheckBoxStyleType = 'default' | 'secondary';

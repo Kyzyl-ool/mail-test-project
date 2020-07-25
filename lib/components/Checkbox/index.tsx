@@ -1,5 +1,12 @@
 import React, { InputHTMLAttributes } from 'react';
 import { CheckBoxStyleType } from 'components/Checkbox/types';
+import classNames from 'classnames';
+import { makeClassNames } from '../../utils/makeObjectFromArray';
+import './index.scss';
+import { useId } from 'react-id-generator';
+import Typography from 'components/Typography';
+
+const { Text, Title } = Typography;
 
 /**
  * Checkbox – чекбокс (кэп)
@@ -7,10 +14,25 @@ import { CheckBoxStyleType } from 'components/Checkbox/types';
 interface ICheckbox extends InputHTMLAttributes<HTMLInputElement> {
   /**
    * Задает стиль
+   * По умолчанию 'default'
    */
-  uxType: CheckBoxStyleType;
+  uxType?: CheckBoxStyleType;
 }
 
 export const Checkbox: React.FC<ICheckbox> = props => {
-  return <></>;
+  const { uxType = 'default', className, children, ...rest } = props;
+  const [htmlId] = useId();
+
+  const modifiers = [uxType];
+
+  const classes = classNames(className, makeClassNames('ux-checkbox', modifiers));
+
+  return (
+    <>
+      <input id={htmlId} {...rest} type="checkbox" className={classes} />
+      <label htmlFor={htmlId}>
+        <Text>{children}</Text>
+      </label>
+    </>
+  );
 };
