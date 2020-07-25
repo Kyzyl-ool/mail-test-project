@@ -91,7 +91,6 @@ module.exports = {
     new CopyWebpackPlugin([{from: './public/favicon.ico', to: 'public/favicon.ico'}]),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({filename: 'app.css'}),
-    new webpack.DefinePlugin(envKeys),
     new webpack.HashedModuleIdsPlugin(),
     //new BundleAnalyzerPlugin()
   ],
