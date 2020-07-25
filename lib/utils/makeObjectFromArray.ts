@@ -1,4 +1,4 @@
-function makeObjectFromArray<T extends unknown>(array: string[], func: (value: string) => T): Record<string, T> {
+export function makeObjectFromArray<T extends unknown>(array: string[], func: (value: string) => T): Record<string, T> {
   return array.reduce(
     (previousValue, currentValue) =>
       Object.assign(previousValue, {
@@ -8,7 +8,7 @@ function makeObjectFromArray<T extends unknown>(array: string[], func: (value: s
   );
 }
 
-function makeModifierClassesFromModifiersName(modifiersName: string[], blockName: string): string[] {
+export function makeModifierClassesFromModifiersName(modifiersName: string[], blockName: string): string[] {
   return modifiersName.map(value => `${blockName}_${value}`);
 }
 
