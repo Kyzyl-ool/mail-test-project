@@ -27,7 +27,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react"
+    "jsx": "react",
+    "rootDirs": ["lib", "stories"]
   },
   "include": ["lib", "public/service-worker.js", "stories"],
   "exclude": ["**/*.svg", "**/node_modules/**", "**/*.scss"]
