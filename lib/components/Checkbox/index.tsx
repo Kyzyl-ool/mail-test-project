@@ -29,7 +29,7 @@ export const Checkbox: React.FC<ICheckbox> = props => {
 
   return (
     <>
-      <input id={htmlId} {...rest} type="checkbox" className={classes} />
+      <input id={htmlId} type="checkbox" className={classes} {...rest} />
       <label htmlFor={htmlId}>
         <Text>{children}</Text>
       </label>

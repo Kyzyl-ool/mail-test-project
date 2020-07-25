@@ -1,4 +1,10 @@
-export const data = {
+export type DataEntry = Record<'id' | 'avatar' | 'sender' | 'theme' | 'snippet', string | number>;
+
+type DataType = {
+  emails: Array<DataEntry>;
+};
+
+export const data: DataType = {
   emails: [
     {
       id: 1,

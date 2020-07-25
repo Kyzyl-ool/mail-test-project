@@ -42,7 +42,8 @@ const Row: React.FC<IGridRow> = props => {
       {React.Children.map<React.ReactNode, React.ReactNode>(children, (child: React.ReactElement, index) => {
         return makeComponent(
           child,
-          spanSum < 24 ? `0 0 ${(child.props.span / 24) * 100}%` : `${child.props.span / spanSum} 0 auto`,
+          // spanSum < 24 ? `0 0 ${(child.props.span / 24) * 100}%` : `${child.props.span / spanSum} 0 auto`,
+          `0 0 ${(child.props.span / 24) * 100}%`,
           index > 0 ? gap : 0
         );
       })}

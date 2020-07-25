@@ -1,5 +1,8 @@
 import React, { HTMLAttributes } from 'react';
 import { NumbersFrom0To24 } from 'components/Grid/types';
+import classNames from 'classnames';
+import { makeClassNames } from '../../../utils/makeObjectFromArray';
+import './index.scss';
 
 /**
  * Col - столбец сетки
@@ -12,9 +15,15 @@ export interface IGridCol extends HTMLAttributes<HTMLSpanElement> {
 }
 
 const Col: React.FC<IGridCol> = props => {
-  const { children, span, ...rest } = props;
+  const { children, span, className, ...rest } = props;
 
-  return <span {...rest}>{children}</span>;
+  const classes = classNames(className, makeClassNames('ux-col', []));
+
+  return (
+    <div className={classes} {...rest}>
+      {children}
+    </div>
+  );
 };
 
 export default Col;
