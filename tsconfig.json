@@ -12,7 +12,8 @@
       "hooks/*": ["lib/hooks/*"],
       "store/*": ["lib/store/*"],
       "config/*": ["lib/config/*"],
-      "styles/*": ["lib/styles/*"]
+      "styles/*": ["lib/styles/*"],
+      "types/*": ["lib/types/*"]
     },
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
