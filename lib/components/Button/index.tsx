@@ -19,16 +19,22 @@ interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
    * По умолчанию 'small'
    */
   uxSize?: ButtonSizeType;
+
+  /**
+   * Если true, заполняет все доступное пространство
+   * Реализован как width: 100%, height: 100%
+   */
+  fillAvailable?: boolean;
 }
 
 export const Button: React.FC<IButton> = props => {
-  const { uxSize = 'small', buttonType = 'default', children, ...rest } = props;
+  const { uxSize = 'small', buttonType = 'default', children, fillAvailable, ...rest } = props;
 
   const modifiers = [uxSize, buttonType];
 
-  const classes = classNames({
-    [props.className]: true,
-    ...makeClassNames('ux-button', modifiers)
+  const classes = classNames(props.className, {
+    ...makeClassNames('ux-button', modifiers),
+    ['ux-button_fill-available']: fillAvailable
   });
 
   return (

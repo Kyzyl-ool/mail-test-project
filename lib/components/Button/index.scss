@@ -4,6 +4,8 @@
 .ux-button {
   border: 1px solid black;
   border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
 
 
   &_small {
@@ -13,5 +15,15 @@
   &_default {
     background-color: $primary-color;
     color: $typography-white-primary-color;
+  }
+  &_secondary {
+    background-color: $typography-white-primary-color;
+    color: $primary-color;
+  }
+
+
+  &_fill-available {
+    width: 100%;
+    height: 100%;
   }
 }

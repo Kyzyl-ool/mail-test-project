@@ -1,2 +1,2 @@
-export type ButtonTypeType = 'default';
+export type ButtonTypeType = 'default' | 'secondary';
 export type ButtonSizeType = 'small';
