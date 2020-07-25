@@ -1,4 +1,5 @@
 const myConfig = require('../webpack.config.js');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   stories: ['../stories/**/*.stories.tsx'],
@@ -9,7 +10,11 @@ module.exports = {
     module: {
       rules: myConfig.module.rules
     },
-    resolve: myConfig.resolve
+    resolve: myConfig.resolve,
+    plugins: [
+      ...config.plugins,
+      new CopyWebpackPlugin([{from: './public/icons', to: 'public/icons'}]),
+    ]
   };
 },
 };

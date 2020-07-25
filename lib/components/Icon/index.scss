@@ -1,0 +1,7 @@
+@import "~styles/icons.scss";
+
+@each $icon-name, $icon-url in $icons {
+  .ux-#{$icon-name} {
+    @include icon($icon-url);
+  }
+}
