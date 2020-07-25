@@ -1,8 +1,8 @@
 @import "~styles/palettes/shades-of-gray.scss";
 
-$typography-black-color: $charleston-green;
 $typography-primary-color: $davys-grey;
 $typography-secondary-color: $cadet-blue-crayola;
+$typography-black-color: $charleston-green;
 
 $typography-white-primary-color: $cultured;
 $typography-white-secondary-color: $cultured-2;
@@ -26,5 +26,19 @@ $text-large: 18px;
 
   &_black {
     color: $typography-black-color
+  }
+}
+
+@mixin font-sizes() {
+  &_small {
+    font-size: $text-small;
+  }
+
+  &_medium {
+    font-size: $text-medium;
+  }
+
+  &_large {
+    font-size: $text-large;
   }
 }

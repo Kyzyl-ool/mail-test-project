@@ -2,19 +2,7 @@
 
 .ux-text {
   font-family: $font;
-  // Size
-  &_small {
-    font-size: $text-small;
-  }
 
-  &_medium {
-    font-size: $text-medium;
-  }
-
-  &_large {
-    font-size: $text-large;
-  }
-  // ----
-
+  @include font-sizes();
   @include colors();
 }
