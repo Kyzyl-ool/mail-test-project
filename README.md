@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/Kyzyl-ool/mail-test-project.svg?branch=master)](https://travis-ci.com/Kyzyl-ool/mail-test-project)
 
-Решение вместе со StoryBook развернуто здесь: http://kyzyl-ool.github.io/mail-test-project
+Решение как StoryBook static развернуто здесь: http://kyzyl-ool.github.io/mail-test-project
 
 ## Компоненты
 При верстке использовались самописные компоненты (см. `lib/components`). Функционал большинства компонентов сделан минимальным в рамках тестового задания.
