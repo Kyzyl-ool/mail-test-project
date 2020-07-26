@@ -18,32 +18,27 @@ module.exports = {
     "**/?(*.)+(spec|test).[tj]s?(x)"
   ],
   transformIgnorePatterns: [
-    // ".*\\/node_modules\\/(?!@amcharts\\/.*\\.js)",
     "node_modules",
     "^.+\\.module\\.(css|sass|scss)$"
   ],
   testPathIgnorePatterns: [
-    "<rootDir>/(build|docs|node_modules)/",
-    "index.test.tsx"
+    "<rootDir>/(build|docs|node_modules)/"
   ],
   testEnvironment: 'jsdom',
   transform: {
     "^.+\\.[t|j]sx?$": "babel-jest",
     ".+\\.(css|styl|less|sass|scss)$": "jest-css-modules-transform"
   },
-  verbose: true,
+  verbose: false,
   setupFilesAfterEnv: ["<rootDir>/setupTests.js"],
   prettierPath: '<rootDir>/node_modules/prettier',
   globals: {
     "ts-jest": {
       "tsConfig": '<rootDir>/tsconfig.json',
-    },
-    "vue-jest": {
-      "experimentalCSSCompile": false
     }
   },
   moduleNameMapper: {
-    "@~styles(.*)$": "<rootDir>/lib/styles/$1",
-    //     // "^@components(.*)$": "<rootDir>/shared/components$1"
+    "\\.(css|less|sass|scss)$": "<rootDir>/__mocks__/styleMock.js",
+    // "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js"
   }
 };

@@ -13,7 +13,8 @@
       "store/*": ["lib/store/*"],
       "config/*": ["lib/config/*"],
       "styles/*": ["lib/styles/*"],
-      "types/*": ["lib/types/*"]
+      "types/*": ["lib/types/*"],
+      "testing/*": ["lib/testing/*"]
     },
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,

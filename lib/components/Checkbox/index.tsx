@@ -25,7 +25,9 @@ export const Checkbox: React.FC<ICheckbox> = props => {
 
   const modifiers = [uxType];
 
-  const classes = classNames(className, makeClassNames('ux-checkbox', modifiers));
+  const classes = classNames(className, {
+    ...makeClassNames('ux-checkbox', modifiers)
+  });
 
   return (
     <>

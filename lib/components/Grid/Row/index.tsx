@@ -30,10 +30,10 @@ const makeComponent = (child: React.ReactElement, flexString: string, gap: numbe
 const Row: React.FC<IGridRow> = props => {
   const { children, gap = 0, className, ...rest } = props;
 
-  const spanSum = React.Children.map<number, React.ReactNode>(
-    children,
-    (child: React.ReactElement) => child.props.span
-  ).reduce((previousValue, currentValue) => previousValue + currentValue, 0);
+  // const spanSum = React.Children.map<number, React.ReactNode>(
+  //   children,
+  //   (child: React.ReactElement) => child.props.span
+  // ).reduce((previousValue, currentValue) => previousValue + currentValue, 0);
 
   const classes = classNames(className, makeClassNames('ux-row', []));
 

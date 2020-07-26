@@ -1,5 +1,5 @@
-@import "~styles/theme.scss";
-@import "~styles/typography.scss";
+@import '~styles/theme.scss';
+@import '~styles/typography.scss';
 
 .ux-button {
   border: 1px solid black;
@@ -16,6 +16,7 @@
     background-color: $primary-color;
     color: $typography-white-primary-color;
   }
+
   &_secondary {
     background-color: $typography-white-primary-color;
     color: $primary-color;
@@ -25,5 +26,9 @@
   &_fill-available {
     width: 100%;
     height: 100%;
+  }
+
+  &_disabled {
+    opacity: 0.5;
   }
 }
