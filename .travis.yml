@@ -18,5 +18,6 @@ deploy:
   local_dir: build/storybook-static
 
 before_deploy:
+  - mkdir build
   - yarn run build-storybook
   - mv storybook-static build
