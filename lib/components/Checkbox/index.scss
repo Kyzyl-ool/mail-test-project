@@ -25,6 +25,16 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 50% 50%;
+
+  }
+
+  & + label:hover::before {
+    background-color: $typography-white-secondary-color;
+    cursor: pointer;
+  }
+
+  & + label:hover {
+    cursor: pointer;
   }
 
   &:checked + label::before {
@@ -36,8 +46,10 @@
     border-color: $primary-color;
     background-color: $typography-white-primary-color;
   }
+
   &_secondary + label::before {
     border-color: $secondary-color;
     background-color: $secondary-color;
+
   }
 }

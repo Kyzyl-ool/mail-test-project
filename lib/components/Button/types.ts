@@ -1,2 +1,4 @@
+import { BaseTripleSizeType } from 'types/baseTypes';
+
 export type ButtonTypeType = 'default' | 'secondary';
-export type ButtonSizeType = 'small';
+export type ButtonSizeType = BaseTripleSizeType;

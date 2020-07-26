@@ -6,20 +6,38 @@
   border-radius: 2px;
   display: inline-flex;
   align-items: center;
-
+  justify-content: center;
 
   &_small {
     padding: 4px 8px;
   }
 
+  &_medium {
+    padding: 8px 10px;
+  }
+
+  &_large {
+    padding: 12px 20px;
+  }
+
   &_default {
     background-color: $primary-color;
     color: $typography-white-primary-color;
+
+    &:hover {
+      background-color: $secondary-color;
+      cursor: pointer;
+    }
   }
 
   &_secondary {
     background-color: $typography-white-primary-color;
     color: $primary-color;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $typography-white-secondary-color;
+    }
   }
 
 
@@ -30,5 +48,9 @@
 
   &_disabled {
     opacity: 0.5;
+
+    &:hover {
+      cursor: unset;
+    }
   }
 }
