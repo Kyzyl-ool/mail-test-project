@@ -1,10 +1,15 @@
 import React from 'react';
 import { Checkbox } from 'components/Checkbox';
+import { boolean, select, withKnobs } from '@storybook/addon-knobs';
 
 export default {
   title: 'Checkbox',
-  component: Checkbox
+  component: Checkbox,
+  decorators: [withKnobs]
 };
 
-export const Default = () => <Checkbox uxType={'default'} />;
-export const Labeled = () => <Checkbox uxType={'default'}>Подпись</Checkbox>;
+export const Default = () => (
+  <Checkbox checked={boolean('Checked', false)} uxType={select('Checkbox type', ['default', 'secondary'], 'default')}>
+    Подпись
+  </Checkbox>
+);

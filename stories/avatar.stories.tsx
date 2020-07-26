@@ -1,5 +1,6 @@
 import React from 'react';
 import { Avatar } from 'components/Avatar';
+import Title from 'components/Typography/Title';
 
 export default {
   title: 'Avatar',
@@ -8,6 +9,7 @@ export default {
 
 export const BasicUsage = () => (
   <>
+    <Title>Avatar</Title>
     <Avatar rounded size={'small'} />
     <Avatar rounded size={'medium'} />
     <Avatar rounded size={'large'} />

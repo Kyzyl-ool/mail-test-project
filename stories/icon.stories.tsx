@@ -6,7 +6,7 @@ export default {
   component: Icon
 };
 
-export const Sizes = () => (
+export const DifferentSizes = () => (
   <>
     <Icon size={'small'} iconName={'trash-icon'} />
     <Icon size={'medium'} iconName={'trash-icon'} />
