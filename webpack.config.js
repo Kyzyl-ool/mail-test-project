@@ -37,6 +37,8 @@ module.exports = {
       models: path.resolve(__dirname, 'lib/models/'),
       store: path.resolve(__dirname, 'lib/store/'),
       styles: path.resolve(__dirname, 'lib/styles/'),
+      types: path.resolve(__dirname, 'lib/types/'),
+      testing: path.resolve(__dirname, 'lib/testing/'),
     }
   },
   module: {
@@ -85,7 +87,7 @@ module.exports = {
       filename: 'index.html',
       favicon: './public/favicon.ico'
     }),
-    // new CopyWebpackPlugin([{from: './public/icons', to: 'public/icons'}]),
+    new CopyWebpackPlugin([{from: './public/icons', to: 'public/icons'}]),
     // new CopyWebpackPlugin([{from: './public/images', to: 'public/images'}]),
     new CopyWebpackPlugin([{from: './public/manifest.json', to: 'public/manifest.json'}]),
     new CopyWebpackPlugin([{from: './public/favicon.ico', to: 'public/favicon.ico'}]),
