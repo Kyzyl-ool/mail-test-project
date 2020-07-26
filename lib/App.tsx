@@ -79,6 +79,7 @@ const App: React.FC = () => {
           <Title color={'light'}>Почтовый ящик пуст</Title>
         )}
       </div>
+      <a href={'storybook-static/index.html'}>Открыть StoryBook</a>
     </div>
   );
 };
