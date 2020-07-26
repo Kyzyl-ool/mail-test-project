@@ -15,9 +15,8 @@ deploy:
   keep_history: true
   on:
     branch: master
-  local_dir: build
+  local_dir: build/storybook-static
 
 before_deploy:
-  - yarn run build
   - yarn run build-storybook
   - mv storybook-static build

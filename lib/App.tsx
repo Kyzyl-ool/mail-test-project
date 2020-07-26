@@ -81,16 +81,6 @@ const App: React.FC = () => {
           )}
         </div>
       </div>
-      <br />
-      <Row>
-        <Col span={24} style={{ display: 'flex', justifyContent: 'center' }}>
-          <a href={'storybook-static/index.html'}>
-            <Button buttonType={'secondary'} uxSize={'medium'}>
-              <Text>Открыть StoryBook</Text>
-            </Button>
-          </a>
-        </Col>
-      </Row>
     </>
   );
 };
