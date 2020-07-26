@@ -20,7 +20,7 @@ interface ICheckbox extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 export const Checkbox: React.FC<ICheckbox> = props => {
-  const { uxType = 'default', className, children, ...rest } = props;
+  const { uxType = 'default', className, children, disabled, ...rest } = props;
   const [htmlId] = useId();
 
   const modifiers = [uxType];
@@ -31,7 +31,7 @@ export const Checkbox: React.FC<ICheckbox> = props => {
 
   return (
     <>
-      <input id={htmlId} type="checkbox" className={classes} {...rest} />
+      <input id={htmlId} type="checkbox" className={classes} {...rest} disabled={disabled} />
       <label htmlFor={htmlId}>
         <Text>{children}</Text>
       </label>

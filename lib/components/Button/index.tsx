@@ -39,8 +39,7 @@ export const Button: React.FC<IButton> = props => {
 
   const classes = classNames(props.className, {
     ...makeClassNames('ux-button', modifiers),
-    ['ux-button_fill-available']: fillAvailable,
-    ['ux-button_disabled']: disabled
+    ['ux-button_fill-available']: fillAvailable
   });
 
   return (

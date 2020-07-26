@@ -24,7 +24,7 @@
     background-color: $primary-color;
     color: $typography-white-primary-color;
 
-    &:hover {
+    &:hover:not(:disabled) {
       background-color: $secondary-color;
       cursor: pointer;
     }
@@ -34,7 +34,7 @@
     background-color: $typography-white-primary-color;
     color: $primary-color;
 
-    &:hover {
+    &:hover:not(:disabled) {
       cursor: pointer;
       background-color: $typography-white-secondary-color;
     }
@@ -46,11 +46,17 @@
     height: 100%;
   }
 
-  &_disabled {
+  &:disabled {
     opacity: 0.5;
-
-    &:hover {
-      cursor: unset;
-    }
   }
+
+  &:not(:disabled) {
+    > .ux-checkbox:not(:checked) {
+      & + label::before, & + label:hover::before {
+        background-color: $typography-white-primary-color;
+      }
+    }
+
+  }
+
 }
